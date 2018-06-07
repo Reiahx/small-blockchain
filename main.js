@@ -34,7 +34,7 @@ class Block {
 class Blockchain {
     constructor(){
         this.chain = [this.createGenesisBlock()];
-        this.difficulty = 3;
+        this.difficulty = 5;
         this.pendingTransactions = [];
         this.miningReward = 100;
     }
