@@ -8,6 +8,12 @@ class Transaction{
     }
 }
 
+// 
+// 
+// -------------------------------------- Begin Block Class ----------------------------------- 
+//
+//   
+
 class Block {
     constructor(timestamp, transactions, previousHash = ''){
         this.timestamp = timestamp;
@@ -31,6 +37,13 @@ class Block {
     }
 }
 
+// 
+// 
+// -------------------------------------- Begin Blockchain Class ----------------------------------- 
+//
+//   
+
+
 class Blockchain {
     constructor(){
         this.chain = [this.createGenesisBlock()];
@@ -39,9 +52,23 @@ class Blockchain {
         this.miningReward = 100;
     }
 
+
+// 
+// 
+// -------------------------------------- Begin Genesis Block --------------------------------- 
+//
+//       
+
     createGenesisBlock() {
         return new Block("06/06/2018", "Genesis Block", "0");
     }
+
+
+// 
+// 
+// -------------------------------------- End Genesis Block ----------------------------------- 
+//
+//     
 
     getLatestBlock(){
         return this.chain[this.chain.length-1];
@@ -97,6 +124,11 @@ class Blockchain {
         return true;
     }
 }
+// 
+// 
+// -------------------------------------- End Classes ----------------------------------- 
+//
+//   
 
 let reiahxCoin = new Blockchain();
 
